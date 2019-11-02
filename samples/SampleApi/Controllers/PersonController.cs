@@ -19,10 +19,9 @@ namespace SampleApi.Controllers
         }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<Person>> Get()
+        public ActionResult<IEnumerable<Subject>> Get()
         {
-            var repo = _UOW.GetReadOnlyRepository<Person>();
-            
+            var repo = _UOW.GetReadOnlyRepository<Subject>();
            return repo.GetList().Items.ToList();
         }
 
